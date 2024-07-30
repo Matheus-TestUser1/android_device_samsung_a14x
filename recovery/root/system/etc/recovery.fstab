@@ -64,6 +64,9 @@ vendor_dlkm	/vendor_dlkm	erofs	ro	wait,avb=vbmeta,logical,first_stage_mount
 system_dlkm	/system_dlkm	erofs	ro	wait,avb,logical,first_stage_mount
 /dev/block/by-name/init_boot	/init_boot	emmc	default	recoveryonly
 
+# Removable storage
+/external_sd  vfat    /dev/block/mmcblk1p1  /dev/block/mmcblk1    flags=storage;wipeingui;removable
+/usb-otg  auto    /dev/block/sda1  /dev/block/sda        flags=display="USB-OTG";storage;wipeingui;removable
 
 
 
